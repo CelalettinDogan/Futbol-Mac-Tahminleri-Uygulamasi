@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg"
+    android:padding="16dp"
+    tools:context=".ui.fragments.AdminPanelFragment">
+
+    <!-- Button -->
+
+    <!-- Phone Number Input -->
+
+    <Button
+        android:id="@+id/btnGeriDon"
+        android:layout_width="157dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Geri"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAdminKaydet"
+        app:layout_constraintTop_toBottomOf="@+id/mSaat" />
+
+    <Button
+        android:id="@+id/btnAdminKaydet"
+        android:layout_width="157dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Kaydet"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGeriDon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mSaat" />
+
+    <EditText
+        android:id="@+id/mno"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="phone"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/mEv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/mEv"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="homeTeam"
+        android:inputType="text"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/mDep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mno" />
+
+    <!-- Department Input -->
+    <EditText
+        android:id="@+id/mDep"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="awayTeam"
+        android:inputType="text"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/mLig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mEv" />
+
+    <!-- League Input -->
+    <EditText
+        android:id="@+id/mLig"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="League"
+        android:inputType="text"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/mTah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mDep" />
+
+    <!-- Prediction Input -->
+    <EditText
+        android:id="@+id/mTah"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="Prediction"
+        android:inputType="text"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/mSaat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mLig" />
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/mSaat"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_searchview"
+        android:backgroundTint="@color/colorBackground"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="date"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/btnGeriDon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTah" />
+
+    <!-- TextView -->
+</androidx.constraintlayout.widget.ConstraintLayout>

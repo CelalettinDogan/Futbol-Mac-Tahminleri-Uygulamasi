@@ -1,0 +1,216 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "2661cbb7399d8fceadfb4f55f914af82",
+    "entities": [
+      {
+        "tableName": "matches",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`MatchID` INTEGER NOT NULL, `Date` TEXT NOT NULL, `Time` TEXT NOT NULL, `DateTime` TEXT NOT NULL, `LeagueCode` TEXT NOT NULL, `LeagueFlag` TEXT NOT NULL, `Country` TEXT NOT NULL, `League` TEXT NOT NULL, `Teams` TEXT NOT NULL, `Team1` TEXT NOT NULL, `Team2` TEXT NOT NULL, `Team1Logo` TEXT, `Team2Logo` TEXT, `MatchResult` INTEGER NOT NULL, `MB` INTEGER NOT NULL, `Result` INTEGER NOT NULL, `GameResult` INTEGER NOT NULL, `LiveStatus` INTEGER NOT NULL, `BetCount` INTEGER NOT NULL, `HomeWin` REAL NOT NULL, `Draw` REAL NOT NULL, `AwayWin` REAL NOT NULL, `Under25` REAL NOT NULL, `Over25` REAL NOT NULL, PRIMARY KEY(`MatchID`))",
+        "fields": [
+          {
+            "fieldPath": "MatchID",
+            "columnName": "MatchID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Date",
+            "columnName": "Date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Time",
+            "columnName": "Time",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "DateTime",
+            "columnName": "DateTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "LeagueCode",
+            "columnName": "LeagueCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "LeagueFlag",
+            "columnName": "LeagueFlag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Country",
+            "columnName": "Country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "League",
+            "columnName": "League",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Teams",
+            "columnName": "Teams",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Team1",
+            "columnName": "Team1",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Team2",
+            "columnName": "Team2",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Team1Logo",
+            "columnName": "Team1Logo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Team2Logo",
+            "columnName": "Team2Logo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "MatchResult",
+            "columnName": "MatchResult",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "MB",
+            "columnName": "MB",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Result",
+            "columnName": "Result",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "GameResult",
+            "columnName": "GameResult",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "LiveStatus",
+            "columnName": "LiveStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "BetCount",
+            "columnName": "BetCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "HomeWin",
+            "columnName": "HomeWin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Draw",
+            "columnName": "Draw",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "AwayWin",
+            "columnName": "AwayWin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Under25",
+            "columnName": "Under25",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Over25",
+            "columnName": "Over25",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "MatchID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "favorites",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`MatchID` INTEGER NOT NULL, `matchDate` TEXT NOT NULL, `matchLeague` TEXT NOT NULL, `matchTeam1` TEXT NOT NULL, `matchTeam2` TEXT NOT NULL, PRIMARY KEY(`MatchID`))",
+        "fields": [
+          {
+            "fieldPath": "MatchID",
+            "columnName": "MatchID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchDate",
+            "columnName": "matchDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchLeague",
+            "columnName": "matchLeague",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchTeam1",
+            "columnName": "matchTeam1",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchTeam2",
+            "columnName": "matchTeam2",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "MatchID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2661cbb7399d8fceadfb4f55f914af82')"
+    ]
+  }
+}

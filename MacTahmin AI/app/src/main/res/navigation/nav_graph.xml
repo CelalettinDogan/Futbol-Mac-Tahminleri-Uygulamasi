@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/aiGuessFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.AiGuessFragment"
+        android:label="fragment_ai_guess"
+        tools:layout="@layout/fragment_ai_guess" />
+    <fragment
+        android:id="@+id/betResultsFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.BetResultsFragment"
+        android:label="fragment_bet_results"
+        tools:layout="@layout/fragment_bet_results" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aiGuessFragment"
+            app:destination="@id/aiGuessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_betResultsFragment"
+            app:destination="@id/betResultsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vipFragment"
+            app:destination="@id/vipFragment" />
+        <action
+            android:id="@+id/toAdminPanel"
+            app:destination="@id/adminPanelFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/vipFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.VipFragment"
+        android:label="fragment_vip"
+        tools:layout="@layout/fragment_vip" >
+        <action
+            android:id="@+id/action_vipFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.bankokuponpro.ui.fragments.AdminPanelFragment"
+        android:label="fragment_admin_panel"
+        tools:layout="@layout/fragment_admin_panel" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.bankokuponpro.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_homepage"
+        android:title="Anasayfa"/>
+    <item
+        android:id="@+id/favoritesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_fav_bottom"
+        android:title="Kazananlar"/>
+
+    <item
+        android:id="@+id/vipFragment"
+        android:enabled="true"
+        android:icon="@drawable/logo"
+        android:title="Vip"/>
+    <item
+        android:id="@+id/aiGuessFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_ai"
+        android:title="Yapay Zeka "/>
+
+    <item
+        android:id="@+id/profileFragment2"
+        android:enabled="true"
+        android:icon="@drawable/ic_person"
+        android:title="Profil"/>
+
+</menu>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41569113779",
+    "project_id": "kupontahmingpt",
+    "storage_bucket": "kupontahmingpt.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41569113779:android:79e1209222b8680e4142c6",
+        "android_client_info": {
+          "package_name": "com.example.bankokuponpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjcgixfuUBnEnIkPpB2lVc_eV4JRf7Els"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
